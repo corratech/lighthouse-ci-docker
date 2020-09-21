@@ -24,7 +24,7 @@ and run the command below:
 ```
 docker run -it --rm -v $(pwd)/example:/home/lhci/example \
 -v $(pwd)/.lighthouseci:/home/lhci/.lighthouseci \
-pixboost/lighthouse-ci-cli lhci --config ./example/lighthouserc.example.yaml autorun
+corra/lighthouse-ci-cli lhci --config ./example/lighthouserc.example.yaml autorun
 ```
 
 You'll find the results in `.lighthouseci` folder.
@@ -65,7 +65,7 @@ pipelines:
   branches:
     master:
       - step:
-          image: pixboost/lighthouse-ci-cli:1.0.0-0.3.7
+          image: corra/lighthouse-ci-cli:1.0.0-0.3.7
           name: Lighthouse
           script:
             - echo "Everything is CI"
