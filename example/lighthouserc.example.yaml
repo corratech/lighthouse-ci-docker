@@ -2,7 +2,9 @@ ci:
   collect:
     additive: false
     url:
-      - https://pixboost.com
+      - https://homepage.com
+      - https://category-landing-page.com
+      - https://product-display-page.com
     settings:
       chrome-flags: "--no-sandbox --headless"
       throttling-method: simulate
@@ -13,3 +15,8 @@ ci:
         cpuSlowdownMultiplier: 4
   assert:
     preset: lighthouse:no-pwa
+  upload:
+    target: lhci
+    token: ask-devops-or-pwa-leads-for-project-specific-build-token
+    serverBaseUrl: https://lh.pwa.corralive.com
+    ignoreDuplicateBuildFailure: true  
